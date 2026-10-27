@@ -1,5 +1,7 @@
 import type { IntroPhase } from '../hooks/useIntro';
+import { site } from '../config/site';
 import { Logo } from './Logo';
+import { SafeImage } from './SafeImage';
 
 type Props = {
   phase: IntroPhase;
@@ -11,6 +13,7 @@ export function IntroSplash({ phase, onLogoSettled }: Props) {
   if (phase === 'done') return null;
   return (
     <div className="splash" data-phase={phase} aria-hidden="true">
+      <SafeImage sources={site.images.logo} alt="" className="splash__backdrop" decoding="async" />
       <div className="splash__inner">
         <Logo className="splash__logo" onSettled={onLogoSettled} />
         <span className="splash__rule" />

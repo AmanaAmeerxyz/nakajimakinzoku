@@ -17,7 +17,7 @@ function Placeholder() {
 
 export function Gallery() {
   return (
-    <section id="works" className="section section--soft" aria-labelledby="works-title">
+    <section id="works" className="section section--soft works-section" aria-labelledby="works-title">
       <div className="container">
         <Reveal>
           <header className="section-head">
@@ -42,7 +42,7 @@ export function Gallery() {
                   <div className="work__frame">
                     <Placeholder />
                     <SafeImage
-                      sources={[work.image]}
+                      sources={work.image}
                       alt={work.alt}
                       className="work__image"
                       loading="lazy"

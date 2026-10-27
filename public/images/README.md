@@ -7,6 +7,9 @@
 | ロゴ | `logo.svg`（または `logo.png` / `logo.webp`） | 横長・背景透過 |
 | ヒーロー背景 | `hero.jpg`（または `hero.webp` / `hero.png`） | 横 2400px 前後・300KB 以下目安 |
 | 製品・加工実績 | `gallery/work-01.jpg` 〜 `work-06.jpg` | 4:3、横 1200px 前後・200KB 以下目安 |
+| オープニング／ヒーローのロゴ | `img1.jpg`（または `.jpeg` / `.png` / `.webp` / `.svg`） | 横長・背景透過推奨 |
+| 製品セクションの工場背景 | `img2.jpg`（または `.jpeg` / `.png` / `.webp` / `.svg`） | 横長 |
+| 製品写真 | `img3.jpg` と `img4.jpg`（または `.jpeg` / `.png` / `.webp` / `.svg`） | 4:3 推奨 |
 
 別のファイル名や拡張子を使う場合、また写真の点数・説明文・代替テキストを変更する場合は
 `src/config/site.ts` を編集してください。

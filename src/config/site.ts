@@ -13,6 +13,9 @@
 
 const BASE = import.meta.env.BASE_URL;
 const img = (path: string) => `${BASE}images/${path}`;
+const publicAsset = (path: string) => `${BASE}${path}`;
+const imageCandidates = (name: string) =>
+  ['jpg', 'jpeg', 'png', 'webp', 'svg'].map((extension) => img(`${name}.${extension}`));
 
 export const site = {
   name: '中島金属',
@@ -27,8 +30,8 @@ export const site = {
     encodeURIComponent('埼玉県草加市青柳2-4-7'),
   /** 先頭から順に読み込みを試し、すべて無ければ文字ロゴを表示します。 */
   images: {
-    logo: [img('logo.svg'), img('logo.png'), img('logo.webp')],
-    hero: [img('hero.jpg'), img('hero.webp'), img('hero.png')],
+    logo: [publicAsset('logo img1.jpeg'), ...imageCandidates('img1'), img('logo.svg'), img('logo.png'), img('logo.webp')],
+    hero: [publicAsset('factory img2.jpeg'), img('hero.jpg'), img('hero.webp'), img('hero.png')],
   },
 } as const;
 
@@ -40,8 +43,8 @@ export const nav = [
 
 export type Work = {
   id: string;
-  /** public/images/ からの相対パス */
-  image: string;
+  /** public/images/ から順に読み込む画像パス */
+  image: readonly string[];
   /** 画像の代替テキスト（実際の写真に合わせて書き換えてください） */
   alt: string;
   /** カードの見出し（品名・分類など） */
@@ -57,42 +60,42 @@ export type Work = {
 export const works: Work[] = [
   {
     id: '01',
-    image: img('gallery/work-01.jpg'),
+    image: [publicAsset('product img4.jpg'), ...imageCandidates('img4')],
     alt: 'アルミニウム部品の表面処理事例の写真（01）',
     title: '加工実績 01（品名を入力）',
     caption: '加工内容・用途などの説明をここに入力してください。',
   },
   {
     id: '02',
-    image: img('gallery/work-02.jpg'),
+    image: [publicAsset('product img3.jpg'), ...imageCandidates('img3')],
     alt: 'アルミニウム部品の表面処理事例の写真（02）',
     title: '加工実績 02（品名を入力）',
     caption: '加工内容・用途などの説明をここに入力してください。',
   },
   {
     id: '03',
-    image: img('gallery/work-03.jpg'),
+    image: [img('gallery/work-03.jpg')],
     alt: 'アルミニウム部品の表面処理事例の写真（03）',
     title: '加工実績 03（品名を入力）',
     caption: '加工内容・用途などの説明をここに入力してください。',
   },
   {
     id: '04',
-    image: img('gallery/work-04.jpg'),
+    image: [img('gallery/work-04.jpg')],
     alt: 'アルミニウム部品の表面処理事例の写真（04）',
     title: '加工実績 04（品名を入力）',
     caption: '加工内容・用途などの説明をここに入力してください。',
   },
   {
     id: '05',
-    image: img('gallery/work-05.jpg'),
+    image: [img('gallery/work-05.jpg')],
     alt: 'アルミニウム部品の表面処理事例の写真（05）',
     title: '加工実績 05（品名を入力）',
     caption: '加工内容・用途などの説明をここに入力してください。',
   },
   {
     id: '06',
-    image: img('gallery/work-06.jpg'),
+    image: [img('gallery/work-06.jpg')],
     alt: 'アルミニウム部品の表面処理事例の写真（06）',
     title: '加工実績 06（品名を入力）',
     caption: '加工内容・用途などの説明をここに入力してください。',
