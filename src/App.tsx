@@ -1,4 +1,5 @@
 import { Contact } from './components/Contact';
+import { FactoryGallery } from './components/FactoryGallery';
 import { Footer } from './components/Footer';
 import { Gallery } from './components/Gallery';
 import { Header } from './components/Header';
@@ -25,6 +26,7 @@ export default function App() {
       <main id="main">
         <Hero revealed={revealed} />
         <Gallery />
+        <FactoryGallery />
         <Contact />
       </main>
       <Footer />
