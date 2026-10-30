@@ -728,6 +728,131 @@ section[id] {
 }
 
 /* ==========================================================================
+   設備・製造能力
+   ========================================================================== */
+.facilities__categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.facilities__category {
+  min-width: 0;
+  padding: clamp(24px, 3.2vw, 40px);
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.facilities__category--wide {
+  grid-column: 1 / -1;
+}
+.facilities__category-title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+}
+.facilities__item-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+.facilities__item-list li {
+  min-width: 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--metal-2);
+  background: var(--bg-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.facilities__equipment {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.facilities__equipment-card {
+  min-width: 0;
+  min-height: 116px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+.facilities__equipment-card h4 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--navy);
+}
+.facilities__specification {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-top: 10px;
+  color: var(--muted);
+}
+.facilities__specification strong {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+}
+.facilities__specification span {
+  font-size: 13px;
+}
+.facilities__infrastructure-spec {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.facilities__infrastructure-spec strong {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+}
+@media (max-width: 820px) {
+  .facilities__categories {
+    gap: 16px;
+  }
+  .facilities__equipment {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .facilities__categories {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .facilities__category--wide {
+    grid-column: auto;
+  }
+  .facilities__item-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .facilities__equipment {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .facilities__equipment-card {
+    min-height: auto;
+    padding: 17px 18px;
+  }
+  .facilities__infrastructure-spec {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+/* ==========================================================================
    製品・加工実績
    ========================================================================== */
 .works {
