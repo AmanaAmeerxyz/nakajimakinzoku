@@ -1,6 +1,6 @@
 import { Reveal } from './Reveal';
 
-const businessAreas = ['化粧品容器', '電気部品', '自動車部品', '文具・その他雑貨'];
+const businessAreas = ['化粧品容器', '文具・その他雑貨', '自動車部品', '機械部品', '電気部品'];
 
 const surfaceTreatments = [
   'アルマイト処理',
@@ -65,7 +65,7 @@ export function Facilities() {
           <Reveal className="facilities__category">
             <section aria-labelledby="facilities-business-title">
               <h3 id="facilities-business-title" className="facilities__category-title">
-                事業分野
+                主要加工品
               </h3>
               <ItemList items={businessAreas} />
             </section>
