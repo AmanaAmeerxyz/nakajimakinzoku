@@ -53,7 +53,7 @@ export function Facilities() {
           <header className="section-head">
             <p className="section-head__eyebrow">事業と設備</p>
             <h2 id="facilities-title" className="section-head__title">
-              設備・製造能力
+              主要加工品
             </h2>
             <p className="section-head__lead">
               事業分野、表面処理技術、主要設備および工場インフラをご紹介します。
