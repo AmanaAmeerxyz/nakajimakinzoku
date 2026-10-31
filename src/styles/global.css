@@ -728,7 +728,7 @@ section[id] {
 }
 
 /* ==========================================================================
-   主要加工品
+   設備・製造能力
    ========================================================================== */
 .facilities__categories {
   display: grid;
@@ -756,7 +756,7 @@ section[id] {
 }
 .facilities__item-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 24px;
 }
