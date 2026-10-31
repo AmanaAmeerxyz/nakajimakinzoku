@@ -32,9 +32,7 @@ const environmentalFacilities = [
 ];
 
 const factoryInfrastructure = [
-  { name: '変電設備' },
   { name: '受電設備容量', specification: '750 kVA' },
-  { name: '補助設備' },
 ];
 
 function ItemList({ items }: { items: readonly string[] }) {
