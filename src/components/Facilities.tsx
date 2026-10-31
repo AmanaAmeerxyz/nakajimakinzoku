@@ -24,11 +24,11 @@ const equipment = [
 ];
 
 const environmentalFacilities = [
-  '純水製造設備',
-  'リン酸回収装置',
-  '硫酸回収装置',
-  '排水処理設備',
-  '純水洗浄設備',
+  '全自動純水製造装置',
+  '全自動硫酸回収装置',
+  '全自動純水製造装置',
+  '全自動リン酸回収装置',
+  '排水処理施設一式',
 ];
 
 const factoryInfrastructure = [
@@ -40,8 +40,8 @@ const factoryInfrastructure = [
 function ItemList({ items }: { items: readonly string[] }) {
   return (
     <ul className="facilities__item-list">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
+      {items.map((item, index) => (
+        <li key={`${item}-${index}`}>{item}</li>
       ))}
     </ul>
   );
